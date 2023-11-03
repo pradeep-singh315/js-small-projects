@@ -3,6 +3,7 @@ let divOne = document.querySelector("#firstDiv")
 let divTwo = document.getElementById("secondDiv")
 let divThree = document.getElementById("thirdDiv")
 let divFour = document.getElementById("fourthDiv")
+let secondHeading = document.querySelector(".second-heading")
 
 
 const colorArray = ["red", "aqua", "sandybrown", "grey"]
@@ -14,6 +15,7 @@ function bgChanger(arr, color)
 {
     arr.addEventListener("click", () => {
         document.body.style.backgroundColor =color
+        secondHeading.style.color = "#fff"
     })
 }
 bgChanger(divOne, colorArray[0])
