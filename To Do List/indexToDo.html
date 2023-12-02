@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styleTDo.css">
+    <title>To Do List</title>
 </head>
 <body>
-    
+    <nav class="navBar">
+        <div>To Do List</div>
+    </nav>
+
+    <main>
+        <div class="inp">
+            <input type="text" placeholder="Enter any task">
+            <button id="adBtn">Add Task</button>
+        </div>
+        <div class="taskList">
+            <ul>
+                <li>wake up early <button id="rmvBtn">Remove</button></li>
+            </ul>
+        </div>
+    </main>
 </body>
+<script src="./scriptToDo.js"></script>
 </html>
