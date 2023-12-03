@@ -2,7 +2,7 @@ let inp = document.querySelector("input")
 let ul = document.querySelector("ul")
 let listItems = document.querySelectorAll("li")
 let addButton = document.querySelector("#adBtn")
-let removeBtn = document.querySelector("#rmvBtn")
+let removeBtn = document.querySelectorAll("#rmvBtn")
 
 addButton.addEventListener("click", () =>{
     let newLi = document.createElement("li")
@@ -17,8 +17,8 @@ addButton.addEventListener("click", () =>{
     inp.value = ""
 })
 
-removeBtn.addEventListener("click", () =>{
-    let prntElement = removeBtn.parentElement
+    ul.addEventListener("click", (event) =>{
+    let prntElement = event.target.parentElement
     console.log(prntElement);
     prntElement.style.display = "none"
 })
