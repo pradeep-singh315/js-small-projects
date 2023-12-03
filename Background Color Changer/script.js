@@ -1,24 +1,11 @@
 // Accessing elements
-let divOne = document.querySelector("#firstDiv")
-let divTwo = document.getElementById("secondDiv")
-let divThree = document.getElementById("thirdDiv")
-let divFour = document.getElementById("fourthDiv")
+let divContainer = document.querySelector(".container")
 let secondHeading = document.querySelector(".second-heading")
 
 
-const colorArray = ["red", "aqua", "sandybrown", "grey"]
-// divTwo.addEventListener('click' , () => {
-//     document.body.style.backgroundColor = colorArray[0]
-// })
-
-function bgChanger(arr, color)
-{
-    arr.addEventListener("click", () => {
-        document.body.style.backgroundColor =color
-        secondHeading.style.color = "#fff"
-    })
-}
-bgChanger(divOne, colorArray[0])
-bgChanger(divTwo, colorArray[1])
-bgChanger(divThree, colorArray[2])
-bgChanger(divFour, colorArray[3])
+divContainer.addEventListener("click", (event) => {
+    const clickedBtnColor = event.target.id
+    document.body.style.backgroundColor = clickedBtnColor
+    secondHeading.style.color = "#fff"
+    console.log("clicked");
+})
